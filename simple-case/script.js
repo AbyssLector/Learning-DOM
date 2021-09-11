@@ -42,3 +42,14 @@ sBlue.addEventListener('input', function () {
     b = sBlue.value;
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
 });
+
+document.body.addEventListener('mousemove', function (event) {
+    // mouse position
+    // console.log(event.clientX);
+    // browser size
+    // window.innerWidth
+    const xPos = Math.round((event.clientX / window.innerWidth) * 255);
+    const yPos = Math.round((event.clientY / window.innerHeight) * 255);
+    const zPos = Math.round((xPos / yPos) * 255);
+    document.body.style.backgroundColor = `rgb(${xPos},${yPos},${zPos})`;
+});
