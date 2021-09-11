@@ -23,3 +23,22 @@ btn.addEventListener('click', function () {
     const body = document.querySelector('body');
     body.style.backgroundColor = randomColor;
 });
+
+r = 255;
+g = 255;
+b = 255;
+const sRed = document.querySelector('input[name=red]');
+sRed.addEventListener('change', function () {
+    r = sRed.value;
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
+const sGreen = document.querySelector('input[name=green]');
+sGreen.addEventListener('change', function () {
+    g = sGreen.value;
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
+const sBlue = document.querySelector('input[name=blue]');
+sBlue.addEventListener('change', function () {
+    b = sBlue.value;
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
